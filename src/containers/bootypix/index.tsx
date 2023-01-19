@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 
 import logo from "../../../public/logo.png";
 import twitterLogo from "../../../public/twitter-icon.png";
-import etherscanLogo from "../../../public/etherescan-icon.png";
+import etherscanLogo from "../../../public/etherscan-icon.png";
 import openseaBtn from "../../../public/opensea.png";
 import { ConnectWalletBtn, OpenseaBtn } from "./buttons";
 import { Audio } from "./audio";
@@ -38,7 +38,7 @@ const condense = (text: string) => {
   return `${text?.substring(0, 5)}...${text?.substring(text.length - 5)}`;
 };
 
-const getBlockExplorer = () => {
+export const getBlockExplorer = () => {
   const chain = parseInt(CHAIN_ID);
   const contractAddress = CONTRACT_ADDRESS;
   switch (chain) {
