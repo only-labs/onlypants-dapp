@@ -1,4 +1,15 @@
 import { useToaster } from "react-hot-toast";
+import { CHAIN_ID, CONTRACT_ADDRESS } from "../constants";
+
+const getBlockExplorer = (tx: string) => {
+  const chain = parseInt(CHAIN_ID);
+  switch (chain) {
+    case 1:
+      return `https://etherscan.io/tx/${tx}`;
+    case 5:
+      return `https://goerli.etherscan.io/tx/${tx}`;
+  }
+};
 
 const Toaster = () => {
   const { toasts, handlers } = useToaster();
@@ -24,11 +35,12 @@ const Toaster = () => {
               style={{
                 background: "#010211",
                 color: "#FFFFFF",
-                padding: "24px 48px",
+                padding: "8px 12px",
                 border: "1px solid #15DB95",
                 borderRadius: "4px",
                 zIndex: "20",
-                width: tx ? "830px" : "unset",
+                width: tx ? "830px" : "830px",
+                maxWidth: "90vw",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: tx ? "space-between" : "center",
@@ -45,11 +57,7 @@ const Toaster = () => {
                 {message}
               </h6>
               {tx ? (
-                <a
-                  href={`https://rinkeby.etherscan.io/tx/${tx}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={getBlockExplorer(tx)} target="_blank" rel="noreferrer">
                   <h3
                     className="toast-text"
                     style={{
