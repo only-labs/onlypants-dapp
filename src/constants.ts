@@ -4,6 +4,7 @@ export const boolify = (x: string) => {
 };
 
 export const CONTRACT_ADDRESS = `${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`;
+export const OPENSEA_URL = process.env.NEXT_PUBLIC_OPENSEA_URL;
 
 export const NETWORK: string = boolify(
   `${process.env.NEXT_PUBLIC_TEST_NETWORK}`
