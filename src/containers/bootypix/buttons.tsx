@@ -3,22 +3,17 @@ import React from "react";
 
 import openseaBtn from "../../../public/opensea.png";
 import connectWalletBtn from "../../../public/connect-wallet.png";
-
 import { OPENSEA_URL } from "../../constants";
 
 export const OpenseaBtn = () => {
   return (
-    <a
-      href={OPENSEA_URL}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <a href={OPENSEA_URL} target="_blank" rel="noreferrer">
       <div className="opensea-btn">
         <Image
           src={openseaBtn}
           alt="opensea button"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
         />
       </div>
     </a>
