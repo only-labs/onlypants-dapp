@@ -87,6 +87,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 1024px) {
         width: 100vw;
@@ -139,6 +140,7 @@
 
 
     .opensea-btn {
+        align-self: center;
         position: relative;
         height: 6rem;
         width: 30rem;
