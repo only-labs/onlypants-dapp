@@ -18,6 +18,10 @@ import { ConnectWalletBtn, OpenseaBtn } from "./buttons";
 import { Audio } from "./audio";
 import If from "../../components/If";
 import Mint from "./Mint";
+import useSound from "use-sound";
+
+import soundOn from "../../../public/sound_on.png";
+import soundOff from "../../../public/sound_off.png";
 
 const BUTTON_TEXT = {
   MINT: "Mint for Free",
@@ -63,6 +67,27 @@ const BootyPixPage = () => {
   const [maxPurchase, setMaxPurchase] = useState<number>();
 
   const [tokenCount, setTokenCount] = useState<number>();
+  const [soundSwitch, setSoundSwitch] = useState(true);
+
+  const [play, { pause }] = useSound("/jlo-booty.mp3", {
+    volume: 0.03,
+    interrupt: true,
+    loop: true,
+  });
+
+  const playMusic = () => {
+    play();
+  };
+
+  useEffect(() => {
+    if (connected) {
+      if (!soundSwitch) {
+        pause();
+      } else {
+        playMusic();
+      }
+    }
+  }, [soundSwitch, pause, play, connected]);
 
   useEffect(() => {
     const getSupply = async () => {
@@ -139,7 +164,18 @@ const BootyPixPage = () => {
               objectFit="contain"
             />
           </a>
-          <Audio />
+          <div
+            className="audio-box"
+            onClick={() => setSoundSwitch(!soundSwitch)}
+          >
+            <Image
+              src={soundSwitch ? soundOn : soundOff}
+              alt="logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          {/* <Audio /> */}
         </div>
         <div className="mint-section">
           <If
