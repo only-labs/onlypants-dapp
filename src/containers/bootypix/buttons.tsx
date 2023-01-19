@@ -4,6 +4,8 @@ import React from "react";
 import openseaBtn from "../../../public/opensea.png";
 import connectWalletBtn from "../../../public/connect-wallet.png";
 
+import { OPENSEA_URL } from "../../constants";
+
 export const OpenseaBtn = () => {
   return (
     <a
