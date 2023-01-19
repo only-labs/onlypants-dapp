@@ -34,6 +34,7 @@
     position: fixed;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: 100vw;
     padding: 0.8rem 6.4rem;
     // border: 2px solid rebeccapurple;
@@ -65,16 +66,16 @@
 
     .twitter-box, .etherscan-box {
         position: relative;
-        height: 5rem;
-        width:5rem;
-        margin-left: 1rem;
+        height: 3rem;
+        width: 3rem;
+        margin: 0 0.5rem;
         cursor: pointer;
         // border: 2px solid tomato;
 
         @media screen and (max-width: 1024px) {
-            margin-left: 0;
+            margin: 0 0.1rem;
             height: 3rem;
-            width: 4rem;
+            width: 3rem;
         }
     }
     
@@ -257,15 +258,18 @@
 }
 
 .audio-box {
-    @extend .twitter-box;
-    // position: relative;
-    // height: 5rem;
-    // width: 5rem;
-    // margin-left: 1rem;
+    position: relative;
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 1rem;
+    margin-left: 0rem;
+    cursor: pointer;
+    // border: 2px solid tomato;
 
-    // @media screen and (max-width: 1024px) {
-    //     height: 4rem;
-    //     width: 4rem;
-    // }
+    @media screen and (max-width: 1024px) {
+        margin-left: 0 1rem;
+        height: 4rem;
+        width: 4rem;
+    }
 
 }
