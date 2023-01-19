@@ -7,7 +7,7 @@ import connectWalletBtn from "../../../public/connect-wallet.png";
 export const OpenseaBtn = () => {
   return (
     <a
-      href="https://opensea.io/collection/block-ape-lads-genesis"
+      href={OPENSEA_URL}
       target="_blank"
       rel="noreferrer"
     >
