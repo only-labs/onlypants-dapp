@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
+import { LOGO_IMG } from "../src/constants";
 import BootyPixPage from "../src/containers/bootypix";
 
 const Home: NextPage = () => {
@@ -8,10 +9,7 @@ const Home: NextPage = () => {
     <React.Fragment>
       <Head>
         <title>Bootypix | Mint Here</title>
-        <link
-          rel="shortcut icon"
-          href="https://blockapelads.com/wp-content/uploads/2022/02/cropped-BAL_logo_Cap_black-32x32.png"
-        />
+        <link rel="shortcut icon" href={LOGO_IMG} />
       </Head>
       <BootyPixPage />
     </React.Fragment>

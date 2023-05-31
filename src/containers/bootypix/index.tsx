@@ -3,8 +3,11 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   CHAIN_ID,
   CONTRACT_ADDRESS,
+  MAX_TOKENS,
   NETWORK,
   SALE_PAUSED,
+  TOKEN_PRICE,
+  USE_MUSIC,
 } from "../../constants";
 import useContract from "../../hooks/useContract";
 import useWallet from "../../hooks/useWallet";
@@ -164,23 +167,38 @@ const BootyPixPage = () => {
               objectFit="contain"
             />
           </a>
-          <div
-            className="audio-box"
-            onClick={() => setSoundSwitch(!soundSwitch)}
-          >
-            <Image
-              src={soundSwitch ? soundOn : soundOff}
-              alt="logo"
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
+          <If
+            condition={USE_MUSIC}
+            then={
+              <div
+                className="audio-box"
+                onClick={() => setSoundSwitch(!soundSwitch)}
+              >
+                <Image
+                  src={soundSwitch ? soundOn : soundOff}
+                  alt="logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            }
+          />
           {/* <Audio /> */}
         </div>
         <div className="mint-section">
           <If
             condition={!connected}
-            then={<ConnectWalletBtn connectWallet={connectWallet} />}
+            then={
+              <div className="connect-container">
+                <h2 className="signup-text">SIGN UP</h2>
+                <div>
+                  <h4 className="signup-desc">{MAX_TOKENS} notable (Fe)male artists.</h4>
+                  <h4 className="signup-desc">{TOKEN_PRICE} per model. First 1000 = free.</h4>
+                </div>
+                <ConnectWalletBtn connectWallet={connectWallet} />
+                <h4 className="subtext-connect">~ Powered by OnlyLabs ~</h4>
+              </div>
+            }
             else={
               <If
                 condition={SALE_PAUSED}

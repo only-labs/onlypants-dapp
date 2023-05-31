@@ -137,11 +137,19 @@ $primary: #15db95;
       font-size: 18px;
     }
   }
+  
+  .connect-container { 
+    .connect-btn {
+      @extend .btn;
+      color: black;
+      padding: 17.5px 91.5px;
+      margin-top: 24px;
+    }
 
-  .connect-btn {
-    @extend .btn;
-    padding: 17.5px 91.5px;
-    margin-top: 24px;
+    .signup-text {
+      color: white;
+      margin-bottom: 4px;
+    }
   }
 }
 

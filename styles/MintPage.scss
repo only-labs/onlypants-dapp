@@ -7,7 +7,6 @@
     background-size: contain;
     display: flex;
     justify-content: flex-end;
-    // border: 3px solid goldenrod;
 
     @media screen and (max-width: 1024px) {
         background-size: cover;
@@ -20,7 +19,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../public/booty.gif");
+    background-image: url("../public/booty.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -37,7 +36,6 @@
     align-items: center;
     width: 100vw;
     padding: 0.8rem 6.4rem;
-    // border: 2px solid rebeccapurple;
     @media screen and (max-width: 1024px) {
         padding: 0.4rem;
     }
@@ -47,7 +45,6 @@
         height: 5rem;
         width: 20rem;
         margin-right: 1rem;
-        // border: 2px solid olivedrab;
 
         @media screen and (max-width: 1024px) {
             height: 3rem;
@@ -70,7 +67,6 @@
         width: 3rem;
         margin: 0 0.5rem;
         cursor: pointer;
-        // border: 2px solid tomato;
 
         @media screen and (max-width: 1024px) {
             margin: 0 0.1rem;
@@ -82,7 +78,6 @@
 }
 
 .mint-section {
-    // border: 3px solid brown;
     height: 100vh;
     width: 50vw;
     display: flex;
@@ -97,7 +92,6 @@
     
     .supply {
         text-align: center;
-        // border: 1px solid forestgreen;
         width: 100%;
 
         @media screen and (max-width: 1024px) {
@@ -112,6 +106,27 @@
         }
     }
 
+    .connect-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .signup-text {
+            color: white;
+            text-align: center;
+        }
+
+        .signup-desc {
+            color: white;
+            text-align: center;
+        }
+
+        .subtext-connect {
+            color: white;
+            font-style: italic;
+        }
+    }
+
    .mint-container {
         text-align: center;
         position: relative;
@@ -119,7 +134,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // border: 1px solid hotpink;
         width: 49vw;
 
         @media screen and (max-width: 1024px) {
@@ -154,7 +168,6 @@
 
     .connect-btn {
         @extend .opensea-btn;
-        // border: 1px solid slateblue;
         align-self: center;
     }
 
@@ -180,7 +193,6 @@
 
     .mint-btn{
         @extend .opensea-btn;
-        // border: 1px solid yellowgreen;
         
         @media screen and (max-width: 1024px) {
             width: 90vw;
@@ -198,13 +210,11 @@
         h2 {
             position: absolute;
             z-index: 4;
-            // border: 1px solid blueviolet;
             @extend .center-btn;
         }
     }
     .mint-input-bg {
         @extend .empty-btn-container;
-        // border: 2px solid tomato;
         @media screen and (max-width: 1024px) {
             width: 90vw;
             height: 8rem;
@@ -264,7 +274,6 @@
     padding: 1rem;
     margin-left: 0rem;
     cursor: pointer;
-    // border: 2px solid tomato;
 
     @media screen and (max-width: 1024px) {
         margin-left: 0 1rem;

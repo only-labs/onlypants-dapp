@@ -26,5 +26,13 @@ export const getEtherscanUrl = () => {
   }
 };
 
+export const LOGO_IMG = process.env.NEXT_PUBLIC_LOGO_IMAGE;
+export const USE_MUSIC = boolify(process.env.NEXT_PUBLIC_USE_MUSIC);
+
 export const SALE_PAUSED = process.env.NEXT_PUBLIC_SALE_PAUSED === "true";
 export const MAX_TOKENS = `${process.env.NEXT_PUBLIC_MAX_TOKENS}`;
+export const TOKEN_PRICE = "0.004";
+
+export const numberize = (num) => {
+
+};
