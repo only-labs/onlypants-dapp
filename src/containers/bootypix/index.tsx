@@ -86,7 +86,7 @@ const BootyPixPage = () => {
     if (connected) {
       if (!soundSwitch) {
         pause();
-      } else {
+      } else if (USE_MUSIC) {
         playMusic();
       }
     }
