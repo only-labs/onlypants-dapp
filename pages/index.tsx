@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Bootypix | Mint Here</title>
+        <title>Onlypants | Mint Here</title>
         <link rel="shortcut icon" href={LOGO_IMG} />
       </Head>
       <BootyPixPage />
