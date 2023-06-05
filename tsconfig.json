@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/containers/bootypix/audio.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/containers/HomePage/audio.jsx"],
   "exclude": ["node_modules"]
 }

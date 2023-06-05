@@ -25,6 +25,7 @@ import useSound from "use-sound";
 
 import soundOn from "../../../public/sound_on.png";
 import soundOff from "../../../public/sound_off.png";
+import { HOME_CONTENT, SUBTEXT, TITLE, TWTITER_URL } from "./constants";
 
 const BUTTON_TEXT = {
   MINT: "Mint for Free",
@@ -52,7 +53,7 @@ export const getBlockExplorer = () => {
   }
 };
 
-const BootyPixPage = () => {
+const HomePage = () => {
   const [connected, setConnected] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [user, provider, signer, connectWallet] = useWallet();
@@ -143,7 +144,7 @@ const BootyPixPage = () => {
           </div>
           <a
             className="twitter-box"
-            href="https://twitter.com/BootypixWtf"
+            href={TWTITER_URL}
             target="_blank"
             rel="noreferrer"
           >
@@ -190,13 +191,16 @@ const BootyPixPage = () => {
             condition={!connected}
             then={
               <div className="connect-container">
-                <h2 className="signup-text">SIGN UP</h2>
+                <h2 className="signup-text no-mobile">{TITLE}</h2>
                 <div>
-                  <h4 className="signup-desc">{MAX_TOKENS} notable (Fe)male artists.</h4>
-                  <h4 className="signup-desc">{TOKEN_PRICE} per model. First 1000 = free.</h4>
+                  {HOME_CONTENT.map((content, idx) => (
+                    <h4 className="signup-desc no-mobile" key={idx}>
+                      {content}
+                    </h4>
+                  ))}
                 </div>
                 <ConnectWalletBtn connectWallet={connectWallet} />
-                <h4 className="subtext-connect">~ Powered by OnlyLabs ~</h4>
+                <h4 className="subtext-connect no-mobile">{SUBTEXT}</h4>
               </div>
             }
             else={
@@ -231,4 +235,4 @@ const BootyPixPage = () => {
   );
 };
 
-export default BootyPixPage;
+export default HomePage;

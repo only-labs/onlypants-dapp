@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
 import { LOGO_IMG } from "../src/constants";
-import BootyPixPage from "../src/containers/bootypix";
+import HomePage from "../src/containers/HomePage";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <title>Onlypants | Mint Here</title>
         <link rel="shortcut icon" href={LOGO_IMG} />
       </Head>
-      <BootyPixPage />
+      <HomePage />
     </React.Fragment>
   );
 };
