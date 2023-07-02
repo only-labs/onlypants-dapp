@@ -1,10 +1,10 @@
-export const TITLE = "SIGN UP";
+export const TITLE = "MINT DETAILS";
 
 export const HOME_CONTENT = [
-    "10,000 notable (Fe)male artists.",
-    "0.004 per model. First 1000 = free."
+    "10,000 memeable models full of suprises.",
+    "0.003 per model. First 1000 are free."
 ];
 
-export const SUBTEXT = "~ Powered by OnlyLabs ~";
+export const SUBTEXT = "~ Powered by OnlyPants ~";
 
 export const TWTITER_URL = "";
