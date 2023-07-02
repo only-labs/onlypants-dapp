@@ -5,6 +5,6 @@ export const HOME_CONTENT = [
     "0.003 per model. First 1000 are free."
 ];
 
-export const SUBTEXT = "~ Powered by OnlyPants ~";
+export const SUBTEXT = "~ Powered by OnlyLabs ~";
 
 export const TWTITER_URL = "";
